@@ -6,16 +6,15 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/ivStar"
+        android:id="@+id/ivProg"
         android:layout_width="200px"
         android:layout_height="200px" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView"
-        tools:text="Year 2" />
+        android:text="TextView" />
 
 </LinearLayout>
