@@ -25,13 +25,14 @@ public class FirstActivity extends AppCompatActivity {
 
         lv = (ListView)findViewById(R. id. lvYear);
         tv = (TextView)findViewById(R. id. textview);
-        aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, al);
+
 
         al = new ArrayList<String>();
         al.add("Year 1");
         al.add("Year 2");
         al.add("Year 3");
 
+        aa = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, al);
         lv.setAdapter(aa);
 
 
@@ -40,6 +41,7 @@ public class FirstActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String year = al.get(position).toString();
                 Intent i = new Intent(FirstActivity.this, SecondActivity.class);
+                i.putExtra("year", year);
                 startActivity(i);
             }
         });
